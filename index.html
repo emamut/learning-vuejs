@@ -18,10 +18,31 @@
            Hover your mouse over me for a few seconds to see my dynamically bound title!
         </span>
       </div>
+      <hr>
 
       <div id="app-3" v-if="seen">
         Now you see me
       </div>
+      <hr>
+
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">{{ todo.text }}</li>
+        </ol>
+      </div>
+      <hr>
+
+      <div id="app-5">
+        <p>{{message}}</p>
+        <button class="btn btn-default" v-on:click="reverseMessage">Reverse Message</button>
+      </div>
+      <hr>
+
+      <div id="app-6">
+        <p>{{message}}</p>
+        <input type="text" class="form-control" v-model="message">
+      </div>
+      <hr>
 
     </div>
   </body>
